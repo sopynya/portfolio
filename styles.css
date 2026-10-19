@@ -265,6 +265,170 @@ main h1 {
     text-shadow: 1px 3px 0px #e198ac;
     margin: 10px 0;
 }
+footer {
+    background-color: #372d36;
+    padding: 40px;
+}
+footer div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.social {
+    display: flex;
+    gap: 10px;
+}
+.social a {
+    background-color: #755367;
+    border-radius: 99px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 44px;
+    height: 44px;
+    transition: background 0.3s ease;
+}
+.social a:hover {
+    background-color: #9a788c;
+}
+.social a:nth-of-type(1) svg {
+    fill: white;
+    width: 22px;
+}
+.social a:nth-of-type(2) svg {
+    fill: white;
+    width: 16px;
+}
+.social a:nth-of-type(3) svg {
+    fill: white;
+    width: 18px;
+}
+footer hr {
+    margin: 24px 0;
+    color: #372d36;
+}
+footer p {
+    text-align: center;
+    color: #6f606e;
+    font-size: 14px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+footer nav {
+    display: flex;
+    gap: 15px;
+}
+footer nav a {
+    color: white;
+    font-family: 'Nunito Sans';
+    text-decoration: none;
+    font-weight: 600;
+    padding: 10px 4px;
+    border-radius: 99px;
+    transition: all 0.3s ease;
+}
+footer nav a:hover {
+    background-color: rgba(226, 180, 197, 0.136);
+    padding: 10px 16px;
+}
+.pjGrid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 70px;
+    margin: 50px 0 20px;
+}
+.project {
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    gap: 10px;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 10px 35px #e7b0c3;
+    padding: 30px;
+}
+.project img {
+    width: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+    margin: auto;
+}
+.project h3 {
+    font-family: "Plus Jakarta Sans";
+    color:#653349;
+    font-size: 26px;
+    font-weight: 900;
+    margin-top: 10px;
+}
+.pjDesc {
+    font-family: 'Nunito Sans';
+    color:#694353;
+    font-weight:  600;
+    font-size: 16px;
+    margin-left: 10px;
+}
+.tools {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    font-family: 'Nunito Sans';
+    margin-left: 10px;
+}
+.tools span {
+    background-color: #ffe6eb;
+    color: #6d3950;
+    font-weight: 600;
+    font-size: 12px;
+    padding: 5px 10px;
+    border-radius: 99px;
+}
+.project h4 {
+    font-family: "Plus Jakarta Sans";
+    color: #a1456e;
+    font-size: 18px;
+    margin: 10px 0 0 0;
+    
+}
+.project .features {
+    color: #6a4958;
+    font-family: 'Nunito Sans';
+    margin-left: 10px;
+}
+.actions {
+    display: flex;
+    gap: 15px;
+    margin-top: 25px;
+}
+.actions button {
+    font-family: 'Nunito Sans';
+    font-weight: 600;
+    font-size: 16px;
+    padding: 10px 15px;
+    border-radius: 99px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+.actions button:hover {  
+    transform: translateY(-3px);
+    box-shadow: 0 10px 10px #d29aaf2a;
+}
+.code {
+    background-color: #fff8fa;
+    border: 1.5px solid #a145676d;
+    color: #531b32;
+}
+.code:hover {
+    border: 1.5px solid #932d52d6;
+}
+.demo {
+    background: linear-gradient(to left, #c46185,#e888ac);
+    color: white;
+    border: none;
+}
+
+
+
 @keyframes typing {
   0%, 10% { width: 0; }
   70%, 100% { width: 34ch; }
