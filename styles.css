@@ -427,7 +427,93 @@ footer nav a:hover {
     border: none;
 }
 
-
+@media only screen and (max-width: 768px) {
+    header nav {
+        display: none;
+    }
+    header p {
+        font-size: 20px;
+    }
+    header {
+        padding: 20px;
+    }
+    .lang-switcher button {
+        font-size: 12px;
+    }
+    main {
+        padding: 20px 15px;
+        flex-direction: column;
+        gap: 40px;
+    }
+    main img {
+        display: none;
+    }
+    main h1 {
+        font-size: 34px;
+    }
+    .heroSub {
+        font-size: 15px;
+    }
+    .heroText {
+        margin: 5px 20px;
+        font-size: 13px;
+    }
+    .heroBtns {
+        margin-top: 20px;
+        gap: 10px;
+        flex-direction: column;
+        flex-wrap: wrap;
+    }
+    .heroBtns button {
+        font-size: 14px;
+        padding: 15px 25px;
+    }
+    #stack h2 {
+        font-size: 25px;
+    }
+    .eyebrow {
+        font-size: 12px;
+    }
+    #stack {
+        padding: 40px 20px;
+    }
+    .tech-img{
+        display: none;
+    }
+    .techs {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+    .tech {
+        padding: 16px 12px;
+    }
+    .tech p {
+        text-align: center;
+    }
+    .divisor {
+        width: 70%;
+    }
+    .tech svg {
+        width: 24px;
+    }
+    footer div {
+        justify-content: center;
+    }
+    footer nav {
+        display: none;
+    }
+    .pjGrid {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        margin-top: 20px;
+    }
+    #projects h2 {
+        font-size: 25px;
+    }
+    .project {
+        padding: 20px;
+    }
+}
 
 @keyframes typing {
   0%, 10% { width: 0; }
