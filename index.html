@@ -141,14 +141,14 @@
                 <div class="project">
                     <img src="/assets/dinoapi.png">
                     <h3>Dino Api</h3>
-                    <p class="pjDesc">Scientific dinosaur database API.</p>
+                    <p class="pjDesc" data-i18n="dinoapiDesc">Scientific dinosaur database API.</p>
                     <p class="tools">
                         <span>JSON</span>
                         <span>Next.js</span>
                         <span>REST APIs</span>
                     </p>
-                    <h4>Features</h4>
-                    <p class="features">
+                    <h4 data-i18n="features">Features</h4>
+                    <p class="features" data-i18n="dinoapiFeatures">
                         This project has a visual catalog of dinosaurs featuring skeleton images (when available) and genus information. 
                         All information (excluding images) can be fetched through the API endpoint /api.
                     </p>
@@ -169,10 +169,10 @@
                         <span>PostgreSQL</span>
                         <span>Zustand</span>
                     </p>
-                    <h4>Features</h4>
-                    <p class="features">
+                    <h4 data-i18n="features">Features</h4>
+                    <p class="features" data-i18n="hanaFeatures">
                         A visual novel (japanese games) database with a cute moe design. 
-                        Users can browse, favorite, review and save for later.<br>
+                        Users can browse, favorite, review and save for later.
                     </p>
                     <div class="actions">
                         <a href="https://github.com/sopynya/hanagate" target="_blank" rel="noopener noreferrer"><button class="code">Github</button></a>
@@ -212,12 +212,75 @@
         <script>
             const translations = {
                 en: {
-                    heroTitle: "Full-Stack Developer"
+                    navIntro: "Introduction",
+                    navPj: "Projects",
+                    navCtt: "Contact",
+                    heroTitle: "Full-Stack Developer",
+                    heroText: `I'm a young developer girl from Brazil RJ. <br>
+                        I have been learning about development and coding since i was 8. I have a big interest in technology, puzzles and science in general, because of that i was always sure of what path i would like to take in my career. <br>
+                        Besides science and coding i love cats, water creatures, dinosaurs, anime and cute things.`,
+                    heroVP: "View Projects",
+                    heroDR: "Download Resume",
+                    heroCTT: "Contact Me",
+                    stackTitle: "Tools I reach for every day",
+                    pjEyebrow: "<span></span>my projects",
+                    pjTitle: "Things I've built, end to end",
+                    dinoapiDesc: "Scientific dinosaur database API.",
+                    features: "Features",
+                    dinoapiFeatures: `This project has a visual catalog of dinosaurs featuring skeleton images (when available) and genus information. 
+                        All information (excluding images) can be fetched through the API endpoint /api.`,
+                    hanaFeatures: `A visual novel (japanese games) database with a cute moe design. 
+                        Users can browse, favorite, review and save for later.`,
+                    footerText: `2026 Built with HTML, CSS & JavaScript.<br><br>
+                        <i>Character images are from japanese sci-fi visual novel / anime Steins;Gate</i>.`
+
                 },
                 pt: {
-                    heroTitle: "Desenvolvedora Full-Stack"
+                    navIntro: "Introdução",
+                    navPj: "Projetos",
+                    navCtt: "Contato",
+                    heroTitle: "Full-Stack Developer",
+                    heroText: `Sou uma desenvolvedora jovem do RJ Brasil.<br>
+                        Estudo programacao e desenvolvimento desde os 8 anos. Tenho um grande interesse em tecnologia, quebra-cabeças e ciência no geral. 
+                        Por conta disso,  sempre tive certeza de qual caminho eu iria tomar na minha carreira profissional. <br>
+                        Além de ciência e códigos, eu amo gatos, animais aquáticos, dinossauros, anime e coisas fofas.`,
+                    heroVP: "Ver Projetos",
+                    heroDR: "Baixar Currículo",
+                    heroCTT: "Fale Comigo",
+                    stackTitle: "Ferramentas que uso diariamente",
+                    pjEyebrow: "<span></span>meus projetos",
+                    pjTitle: "Desenvolvidos por mim de ponta a ponta",
+                    dinoapiDesc: "Database científica de dinossauros com API.",
+                    features: "Recursos",
+                    dinoapiFeatures: `Esse projeto tem um catálogo visual de dinossauros com imagens do esqueleto (quando possivel) e informações do gênero e espécies. 
+                        Todas as informações (exceto as imagens) podem ser obtidas pelo endpoint da API /api.`,
+                    hanaFeatures: `Uma database de visual novels (jogos japoneses) com um design moe e fofo.
+                        Usuários podem explorar, favoritar, avaliar e salvar para depois.`,
+                    footerText: `2026 Desenvolvido com HTML, CSS & JavaScript.<br><br>
+                        <i>Imagens de personagens são da visual novel / anime japonesa sci-fi Steins;Gate</i>.`
+
                 }
             };
+
+            function setLanguage(lang) {
+                document.querySelectorAll("[data-i18n]").forEach(el => {
+                    const key = el.getAttribute("data-i18n");
+                    if (translations[lang][key]) {
+                        el.innerHTML = translations[lang][key];
+                    }
+                });
+
+                document.querySelectorAll(".lang-btn").forEach(btn => {
+                    btn.classList.toggle("active", btn.getAttribute("data-lang") === lang);
+                });
+            }
+            document.querySelectorAll(".lang-btn").forEach(btn => {
+                btn.addEventListener("click", () => {
+                    const targetLang = btn.getAttribute("data-lang");
+                    setLanguage(targetLang);
+                });
+            });
+
 
             window.addEventListener('load', () => {
                 const elements = document.querySelectorAll('.reveal');
