@@ -36,7 +36,7 @@
                 </p>
                 <div class="heroBtns">
                     <a href="#projects"><button class="heroVP" data-i18n="heroVP">View Projects</button></a>
-                    <button class="heroDR" data-i18n="heroDR">Download Resume</button>
+                    <button id="downloadBtn" class="heroDR" data-i18n="heroDR">Download Resume</button>
                     <a href="#contact"><button class="heroCTT" data-i18n="heroCTT">Contact Me</button></a>
                 </div>
             </div>
@@ -157,7 +157,29 @@
                         <a href="https://dinoapi-tau.vercel.app" target="_blank" rel="noopener noreferrer"><button class="demo">Live Demo</button></a>
                     </div>
                 </div>
+
+                <div class="project">
+                    <img src="./assets/githubanalyzer.png">
+                    <h3>GitHub Analyzer</h3>
+                    <p class="pjDesc" data-i18n="gitaDesc">GitHub repository analyzer.</p>
+                    <p class="tools">
+                        <span>Next.js</span>
+                        <span>Google Gemini API</span>
+                        <span>Zod</span>
+                    </p>
+                    <h4 data-i18n="features">Features</h4>
+                    <p class="features" data-i18n="gitaFeatures">
+                        Analyze any public public GitHub repository using AI and get a professional code review. 
+                        Features scoring system that reviews overall code quality and many other categories.
+                        Also gives improvement tips.
+                    </p>
+                    <div class="actions">
+                        <a href="https://github.com/sopynya/github-analyzer" target="_blank" rel="noopener noreferrer"><button class="code">Github</button></a>
+                        <a href="https://github-analyzer-kappa.vercel.app" target="_blank" rel="noopener noreferrer"><button class="demo">Live Demo</button></a>
+                    </div>
+                </div>
                 
+                <!---
                 <div class="project">
                     <img src="./assets/dinoapi.png">
                     <h3>HanaGate</h3>
@@ -179,6 +201,7 @@
                         <a href="https://hanagate.vercel.app/" target="_blank" rel="noopener noreferrer"><button class="demo">Live Demo</button></a>
                     </div>
                 </div>
+                -->
             </div>
         </section>
 
@@ -232,7 +255,11 @@
                     hanaFeatures: `A visual novel (japanese games) database with a cute moe design. 
                         Users can browse, favorite, review and save for later.`,
                     footerText: `2026 Built with HTML, CSS & JavaScript.<br><br>
-                        <i>Character images are from japanese sci-fi visual novel / anime Steins;Gate</i>.`
+                        <i>Character images are from japanese sci-fi visual novel / anime Steins;Gate</i>.`,
+                    gitaFeatures: `Analyze any public public GitHub repository using AI and get a professional code review. 
+                        Features scoring system that reviews overall code quality and many other categories.
+                        Also gives improvement tips.`,
+                    gitaDesc: 'GitHub repository analyzer.'
 
                 },
                 pt: {
@@ -257,7 +284,10 @@
                     hanaFeatures: `Uma database de visual novels (jogos japoneses) com um design moe e fofo.
                         Usuários podem explorar, favoritar, avaliar e salvar para depois.`,
                     footerText: `2026 Desenvolvido com HTML, CSS & JavaScript.<br><br>
-                        <i>Imagens de personagens são da visual novel / anime japonesa sci-fi Steins;Gate</i>.`
+                        <i>Imagens de personagens são da visual novel / anime japonesa sci-fi Steins;Gate</i>.`,
+                    gitaFeatures: `Analisa qualquer repositório do GitHub público com IA e mostra uma avaliação profissional da qualidade do código. 
+                        Contém sistema de score para qualidade de código geral e diversas categorias. Também mostra dicas de melhora.`,
+                    gitaDesc: 'Analisador de repositório de GitHub.'
                 }
             };
 
@@ -279,6 +309,20 @@
                     setLanguage(targetLang);
                 });
             });
+
+            document.getElementById('downloadBtn').addEventListener('click', () => {
+                const pdfPath = './assets/Sophia Trindade - Resume.pdf'; 
+                const fileName = 'Sophia Trindade - Resume.pdf';
+
+                const link = document.createElement('a');
+                link.href = pdfPath;
+                link.download = fileName;
+    
+                document.body.appendChild(link); 
+                link.click();
+                document.body.removeChild(link); 
+            });
+
 
 
             window.addEventListener('load', () => {
