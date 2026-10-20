@@ -182,7 +182,7 @@ main h1 {
     padding: 40px 40px 0 40px;
     display: flex;
     gap: 30px;
-    background-image: url('/assets/bubble.png');
+    background-image: url('./assets/bubble.png');
     background-size: 60%;
     overflow: hidden;
 }
@@ -432,16 +432,20 @@ footer nav a:hover {
         display: none;
     }
     header p {
-        font-size: 20px;
+        font-size: 16px;
     }
     header {
-        padding: 20px;
+        padding: 10px;
+    }
+    .lang-switcher {
+        gap: 5px;
     }
     .lang-switcher button {
         font-size: 12px;
+        padding: 8px 10px;
     }
     main {
-        padding: 20px 15px;
+        padding: 30px 5px;
         flex-direction: column;
         gap: 40px;
     }
@@ -449,24 +453,26 @@ footer nav a:hover {
         display: none;
     }
     main h1 {
-        font-size: 34px;
+        font-size: 24px;
     }
     .heroSub {
-        font-size: 15px;
+        font-size: 14px;
     }
     .heroText {
-        margin: 5px 20px;
-        font-size: 13px;
+        margin: 18px 6px;
+        font-size: 14px;
     }
     .heroBtns {
-        margin-top: 20px;
+        margin-top: 30px;
         gap: 10px;
         flex-direction: column;
         flex-wrap: wrap;
+        width: 100%;
     }
     .heroBtns button {
         font-size: 14px;
-        padding: 15px 25px;
+        padding: 10px 25px;
+        width: 190px;
     }
     #stack h2 {
         font-size: 25px;
@@ -482,18 +488,20 @@ footer nav a:hover {
     }
     .techs {
         grid-template-columns: 1fr 1fr 1fr;
+        margin-top: 20px;
     }
     .tech {
-        padding: 16px 12px;
+        padding: 12px;
     }
     .tech p {
         text-align: center;
+        font-size: 10px;
     }
     .divisor {
         width: 70%;
     }
     .tech svg {
-        width: 24px;
+        width: 16px;
     }
     footer div {
         justify-content: center;
