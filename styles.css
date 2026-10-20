@@ -306,6 +306,7 @@ footer div {
 footer hr {
     margin: 24px 0;
     color: #372d36;
+    border-color: #372d36;
 }
 footer p {
     text-align: center;
